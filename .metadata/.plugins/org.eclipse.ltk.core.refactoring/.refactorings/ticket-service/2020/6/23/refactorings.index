@@ -1,0 +1,8 @@
+1591022201509	Rename field 'orders'
+1591022740725	Rename field 'customerId'
+1591022752217	Rename local variable 'customerId'
+1591022786085	Encapsulate field 'accountId'
+1591023307992	Rename local variable 'order'
+1591461048869	Rename local variable 'commande'
+1591461072396	Rename local variable 'nouvelleCommande'
+1591462179571	Rename type 'OrderDao'

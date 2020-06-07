@@ -1,0 +1,11 @@
+package be.ticket.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import be.ticket.domain.Ticket;
+
+@Repository
+public interface TicketDAO extends JpaRepository<Ticket, Integer> {
+
+}

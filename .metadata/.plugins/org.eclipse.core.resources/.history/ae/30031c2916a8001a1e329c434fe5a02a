@@ -1,0 +1,5 @@
+package be.ticket.exceptions;
+
+public class ImpossibleAjouterCommandeException extends Exception {
+
+}

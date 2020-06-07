@@ -1,0 +1,12 @@
+package be.account.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@FeignClient(name = "ticket-service")
+public interface TicketFeignClient {
+	@GetMapping("/findById")
+    Object getTicketsForAccount(@RequestParam int id);
+
+}

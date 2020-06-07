@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;accountId&apos; in &apos;be.account.controller.AccountController.getTicketsForAccount(...)&apos; to &apos;id&apos;&#x0D;&#x0A;- Original project: &apos;account-service&apos;&#x0D;&#x0A;- Original element: &apos;be.account.controller.AccountController.getTicketsForAccount(int).accountId&apos;&#x0D;&#x0A;- Renamed element: &apos;accountId&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;accountId&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;be.account.controller{AccountController.java[AccountController~getTicketsForAccount~I@accountId!994!1020!1012!1020!I!0!true" name="id" references="true" stamp="1591541458499" version="1.0"/>
+</session>

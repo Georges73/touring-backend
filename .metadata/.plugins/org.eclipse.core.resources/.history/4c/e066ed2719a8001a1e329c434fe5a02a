@@ -1,0 +1,48 @@
+package be.account.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import be.account.domain.Account;
+import be.account.feign.TicketFeignClient;
+
+@RestController
+public class AccountController {
+	
+	 private List<Account> accounts = Arrays.asList(
+	            new Account(1, 11111, "Joe Bloggs", null, 0, null),
+	            new Account(2, 22222, "Jane Doe", null, 0, null),
+	            new Account(3, 33333, "Joe Gage", null, 0, null));
+	 
+	 private TicketFeignClient ticketFeignClient;
+	 
+	 
+	    
+	    public AccountController(TicketFeignClient ticketFeignClient) {
+		this.ticketFeignClient = ticketFeignClient;
+	}
+	    
+	    @GetMapping("/{id}/tickets")
+	    public Object getTicketsForAccount(@PathVariable int id) {
+	        return ticketFeignClient.getTicketsForAccount(id);
+	    }
+
+		@GetMapping
+	    public List<Account> getAllAccounts(@RequestParam(required = false) Integer customerId) {
+	        return accounts;
+	    }
+	    
+	    @GetMapping("/{id}")
+	    public Account getAccountById(@PathVariable int id) {
+	        return accounts.stream()
+	                        .filter(account -> account.getId() == id)
+	                        .findFirst()
+	                        .orElseThrow(IllegalArgumentException::new);
+	    }
+
+}

@@ -1,0 +1,5 @@
+package be.account.domain;
+
+public class Account {
+
+}

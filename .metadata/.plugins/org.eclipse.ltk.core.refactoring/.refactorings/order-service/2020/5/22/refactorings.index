@@ -1,0 +1,6 @@
+1590774126016	Rename type 'Order'
+1590777388310	Rename type 'Order'
+1590777491108	Encapsulate field 'category'
+1590777496382	Encapsulate field 'publishDate'
+1590777709792	Rename field 'name'
+1590777784969	Rename local variable 'name'
